@@ -20,10 +20,10 @@ export class UsersService {
   userList: Array<User> = [
     {
       id: 1,
-      userName: "Akhilesh",
-      userEmail: "akhilesh.kumandan@gmail.com",
-      password: "incorrect123",
-      description: "I am a CHUBB employee"
+      userName: "Anthyush",
+      userEmail: "tallurianthyush02@gmail.com",
+      password: "student6655",
+      description: "VNR Student"
     }
   ]
   addUser(user: UserItem) {
