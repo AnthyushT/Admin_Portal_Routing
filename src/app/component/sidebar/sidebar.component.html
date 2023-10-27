@@ -1,0 +1,63 @@
+<nav id="sidebar" class="sidebar js-sidebar" [ngbCollapse]="isFlag" style="overflow-y: scroll;">
+    <div class="sidebar-content js-simplebar">
+        <a class="sidebar-brand" style="font : 28.4px; color : #F8F9FA" class="sidebar-toggle js-sidebar-toggle"
+            [attr.aria-expanded]="isFlag" aria-controls="navbarsExampleDefault" aria-label="Toggle navigation">
+
+        </a>
+        <span class="align-middle d-flex justify-content-start mx-3 pt-2 mb-0"
+            style="font-size:18.6px ;color : #F8F9FA ;">Admin Portal</span>
+        <div style="float: right;" class="sidebar-nav collapse collapse-horizontal" id="sidebarExampleDefault"
+            [ngbCollapse]="isFlag">
+            <ul class="sidebar-nav collapse collapse-horizontal" id="sidebarExampleDefault" [ngbCollapse]="isFlag">
+
+                <li class="sidebar-item active">
+                    <a class="sidebar-link" routerLink="/">
+                        <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link" routerLink="/login">
+                        <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Sign In</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link" routerLink="/register">
+                        <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign Up</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link" routerLink="/users">
+                        <i class="align-middle" data-feather="users"></i> <span class="align-middle">Users</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link" routerLink="/products">
+                        <i class="align-middle" data-feather="codesandbox"></i> <span
+                            class="align-middle">Products</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="sidebar-nav">
+                <li class="sidebar-header">
+                    Pages
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link" routerLink="/market">
+                        <i class="align-middle" data-feather="user"></i> <span class="align-middle">Market</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link" routerLink="/cart">
+                        <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Cart</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

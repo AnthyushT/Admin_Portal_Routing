@@ -1,0 +1,17 @@
+<div class="container d-flex flex-column justify-content-center align-items-center">
+    <p class="display-6 my-2 mt-5">Current User</p>
+    <div class="card mb-3 rounded-5" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=" class="img-fluid rounded-5" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title mb-5">Username : {{currentUser?.userName}}</h5>
+              <p class="card-text">EmailId : {{currentUser?.userEmail}}</p>
+              <p class="card-text">Description : <small class="text-body-secondary">{{currentUser?.description}}</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

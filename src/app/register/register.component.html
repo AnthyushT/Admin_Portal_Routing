@@ -1,0 +1,104 @@
+<main class="d-flex w-100">
+	<div class="container d-flex flex-column">
+		<div class="row vh-100">
+			<div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto d-table h-100">
+				<div class="d-table-cell align-middle">
+
+					<div class="text-center mt-4">
+						<h1 class="h2">Get started</h1>
+						<p class="lead">
+							Start creating the best possible user experience for you customers.
+						</p>
+					</div>
+
+					<div class="card">
+						<div class="card-body">
+							<div class="m-sm-3">
+								<form [formGroup]="userData">
+									<div class="mb-3">
+										<label class="form-label">Full name</label>
+										<input formControlName="userName" class="form-control form-control-lg"
+											type="text" name="name" placeholder="Enter your name" />
+										<div *ngIf="name?.invalid && (name?.dirty || name?.touched)"
+											class="alert text-danger">
+											<div *ngIf="name?.errors?.['required']">
+												Name is required.
+											</div>
+											<div *ngIf="name?.errors?.['minlength']">
+												Name must be at least 4 characters long.
+											</div>
+											<div *ngIf="name?.errors?.['maxlength']">
+												Name cant be more than 30 characters long.
+											</div>
+										</div>
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Email</label>
+										<input formControlName="userEmail" class="form-control form-control-lg"
+											type="email" name="email" placeholder="Enter your email" />
+										<div *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+											class="alert text-danger">
+											<div *ngIf="email?.errors?.['required']">
+												Email is required.
+											</div>
+											<div *ngIf="email?.errors?.['email']">
+												Email must be in proper format.
+											</div>
+
+										</div>
+									</div>
+
+									<div class="mb-3">
+										<label class="form-label">Password</label>
+										<input formControlName="password" class="form-control form-control-lg"
+											type="password" name="password" placeholder="Enter password" />
+										<div *ngIf="password?.invalid && (password?.dirty || password?.touched)"
+											class="alert text-danger">
+											<div *ngIf="password?.errors?.['required']">
+												Password is required.
+											</div>
+											<div *ngIf="password?.errors?.['minlength']">
+												Password must be at least 4 characters long.
+											</div>
+											<div *ngIf="password?.errors?.['maxlength']">
+												Password cant be more than 30 characters long.
+											</div>
+										</div>
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Confirm Password</label>
+										<input formControlName="confirmPassword" class="form-control form-control-lg"
+											type="password" name="password" placeholder="Confirm password" />
+										<div *ngIf="confirmPassword?.invalid && (confirmPassword?.dirty || confirmPassword?.touched)"
+											class="alert text-danger">
+											<div *ngIf="confirmPassword?.errors?.['required']">
+												Password is required.
+											</div>
+											<div *ngIf="confirmPassword?.errors?.['minlength']">
+												Password must be at least 4 characters long.
+											</div>
+											<div *ngIf="confirmPassword?.errors?.['maxlength']">
+												Password cant be more than 30 characters long.
+											</div>
+										</div>
+										<div *ngIf="userData.errors?.['comparePasswordValidator']">
+											Passwords don't match.
+										</div>
+									</div>
+									<div class="mb-3">
+										<label for="floatingTextarea">Description</label>
+										<textarea formControlName="description" class="form-control"
+											placeholder="About yourself" id="floatingTextarea"></textarea>
+									</div>
+									<div class="d-grid gap-2 mt-3">
+										<a class="btn btn-lg btn-primary" [ngClass]="{'disabled':userData.invalid && (userData.dirty || userData.touched)}"  (click)="addUser()">Sign up</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
